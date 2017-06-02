@@ -1,0 +1,19 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazycat66/bookList.git"
+  },
+  "author": "LaztCat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazycat66/bookList/issues"
+  },
+  "homepage": "https://github.com/lazycat66/bookList#readme"
+}
