@@ -5,7 +5,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 module.exports = {
-    context: __dirname + "/src",
+    context: __dirname + "/public",
     entry: {
         app: "./app.js",
     },
@@ -19,7 +19,7 @@ module.exports = {
             loader: "babel-loader",
             options: { presets: ["latest"] },
             exclude: path.resolve(__dirname, 'node_modules'),
-            include: path.resolve(__dirname, 'src')
+            include: path.resolve(__dirname, 'public')
         }, {
             test: /\.css$/,
             loader: "style-loader!css-loader"
