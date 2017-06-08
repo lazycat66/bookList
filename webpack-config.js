@@ -1,7 +1,6 @@
 'use strict';
 
 const webpack = require("webpack");
-const htmlWebpackPlugin = require("html-webpack-plugin");
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 module.exports = {
@@ -26,25 +25,9 @@ module.exports = {
         }, {
             test: /\.less$/,
             loader: "style-loader!css-loader!postcss-loader!less-loader"
-        }, {
-            test: /\.html$/,
-            loader: "html-loader"
-        }, {
-            test: /\.(png|jpg|gif|svg)$/i,
-            loader: 'file-loader',
-            options: { name: 'assets/[name]-[hash:5]-[ext]' }
         }]
     },
     plugins: [
-      new htmlWebpackPlugin({
-            filename: 'app.html',
-            template: 'app.html',
-            inject: 'body',
-            miniify: {
-                removeComments: true,
-                collapseWhitespace: true
-            }
-        }),
       new webpack.LoaderOptionsPlugin({
             options: {
                 postcss: function () {
