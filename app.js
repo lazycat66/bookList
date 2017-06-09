@@ -4,24 +4,20 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-/* GET home page. */
-var router.get('/', function (req, res, next) {
-  res.redirect('/login');
-});
+var routes = require('./routes/index');
 
 var app = express();
 
 app.use(logger('dev'));
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'html');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-// init routes;
+app.listen(3035, function() {
+    console.log("server start");
+});
+
 routes.init(app);
 
 // catch 404 and forward to error handler
